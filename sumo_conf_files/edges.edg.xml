@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <!-- Horizontal edges connecting junctions -->
+    <edge id="E1_2" from="J1" to="J2" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E2_1" from="J2" to="J1" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E3_4" from="J3" to="J4" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E4_3" from="J4" to="J3" priority="2" numLanes="1" speed="13.89"/>
+    
+    <!-- Vertical edges connecting junctions -->
+    <edge id="E1_3" from="J1" to="J3" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E3_1" from="J3" to="J1" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E2_4" from="J2" to="J4" priority="2" numLanes="1" speed="13.89"/>
+    <edge id="E4_2" from="J4" to="J2" priority="2" numLanes="1" speed="13.89"/>
+    
+    <!-- External connections (2 per junction) -->
+    <!-- J1 connections -->
+    <edge id="EN1_J1" from="N1" to="J1" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ1_N1" from="J1" to="N1" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EN2_J1" from="N2" to="J1" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ1_N2" from="J1" to="N2" priority="1" numLanes="1" speed="13.89"/>
+    
+    <!-- J2 connections -->
+    <edge id="EN3_J2" from="N3" to="J2" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ2_N3" from="J2" to="N3" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EN4_J2" from="N4" to="J2" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ2_N4" from="J2" to="N4" priority="1" numLanes="1" speed="13.89"/>
+    
+    <!-- J3 connections -->
+    <edge id="EN5_J3" from="N5" to="J3" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ3_N5" from="J3" to="N5" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EN6_J3" from="N6" to="J3" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ3_N6" from="J3" to="N6" priority="1" numLanes="1" speed="13.89"/>
+    
+    <!-- J4 connections -->
+    <edge id="EN7_J4" from="N7" to="J4" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ4_N7" from="J4" to="N7" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EN8_J4" from="N8" to="J4" priority="1" numLanes="1" speed="13.89"/>
+    <edge id="EJ4_N8" from="J4" to="N8" priority="1" numLanes="1" speed="13.89"/>
+</edges>

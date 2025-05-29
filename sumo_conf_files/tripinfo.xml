@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-05-27 15:24:30 by Eclipse SUMO GUI Version v1_23_0+0017-d43872979d0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="./sumo_conf_files/network.net.xml"/>
+        <route-files value="./sumo_conf_files/routes.rou.xml"/>
+        <additional-files value="./sumo_conf_files/tls.add.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="./sumo_conf_files/summary.xml"/>
+        <tripinfo-output value="./sumo_conf_files/tripinfo.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="200"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <lateral-resolution value="0.8"/>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <traci_server>
+        <remote-port value="55617"/>
+    </traci_server>
+
+</sumoConfiguration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+</tripinfos>

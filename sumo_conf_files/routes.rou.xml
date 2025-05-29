@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+    <!-- Enhanced vehicle types for different traffic patterns -->
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5.0" maxSpeed="50.0"/>
+    <vType id="slow_car" accel="1.8" decel="3.5" sigma="0.8" length="5.5" maxSpeed="35.0"/>
+    <vType id="truck" accel="1.2" decel="3.0" sigma="0.3" length="12.0" maxSpeed="40.0"/>
+    <vType id="bus" accel="1.0" decel="2.8" sigma="0.4" length="15.0" maxSpeed="45.0"/>
+    
+    <!-- Original straight movement routes -->
+    <route id="horizontal_top" edges="EN1_J1 E1_2 EJ2_N3"/>
+    <route id="horizontal_top_reverse" edges="EN3_J2 E2_1 EJ1_N1"/>
+    <route id="horizontal_bottom" edges="EN5_J3 E3_4 EJ4_N7"/>
+    <route id="horizontal_bottom_reverse" edges="EN7_J4 E4_3 EJ3_N5"/>
+    
+    <route id="vertical_left" edges="EN2_J1 E1_3 EJ3_N6"/>
+    <route id="vertical_left_reverse" edges="EN6_J3 E3_1 EJ1_N2"/>
+    <route id="vertical_right" edges="EN4_J2 E2_4 EJ4_N8"/>
+    <route id="vertical_right_reverse" edges="EN8_J4 E4_2 EJ2_N4"/>
+    
+    <!-- Additional routes using existing valid connections -->
+    <!-- These routes create more traffic on the same paths as your originals -->
+    <route id="extra_horizontal_top" edges="EN1_J1 E1_2 EJ2_N3"/>
+    <route id="extra_horizontal_top_reverse" edges="EN3_J2 E2_1 EJ1_N1"/>
+    <route id="extra_vertical_left" edges="EN2_J1 E1_3 EJ3_N6"/>
+    <route id="extra_vertical_right" edges="EN4_J2 E2_4 EJ4_N8"/>
+    
+    <!-- TRAFFIC FLOWS - KEEPING UNDER 50 VEHICLES PER HOUR -->
+    <!-- Horizontal flows - reduced to max 50 veh/hr -->
+    <flow id="flow_h_top" route="horizontal_top" begin="0" end="3600" vehsPerHour="50" type="car"/>
+    <flow id="flow_h_top_rev" route="horizontal_top_reverse" begin="15" end="3600" vehsPerHour="45" type="car"/>
+    <flow id="flow_h_bottom" route="horizontal_bottom" begin="30" end="3600" vehsPerHour="50" type="car"/>
+    <flow id="flow_h_bottom_rev" route="horizontal_bottom_reverse" begin="45" end="3600" vehsPerHour="45" type="car"/>
+    
+    <!-- Vertical flows - reduced to max 50 veh/hr -->
+    <flow id="flow_v_left" route="vertical_left" begin="60" end="3600" vehsPerHour="50" type="car"/>
+    <flow id="flow_v_left_rev" route="vertical_left_reverse" begin="75" end="3600" vehsPerHour="45" type="car"/>
+    <flow id="flow_v_right" route="vertical_right" begin="90" end="3600" vehsPerHour="50" type="car"/>
+    <flow id="flow_v_right_rev" route="vertical_right_reverse" begin="105" end="3600" vehsPerHour="45" type="car"/>
+    
+    <!-- Additional flows using the same valid routes - ALL UNDER 50 veh/hr -->
+    <flow id="flow_extra_h_top" route="extra_horizontal_top" begin="300" end="3600" vehsPerHour="40" type="slow_car"/>
+    <flow id="flow_extra_h_top_rev" route="extra_horizontal_top_reverse" begin="315" end="3600" vehsPerHour="35" type="car"/>
+    <flow id="flow_extra_v_left" route="extra_vertical_left" begin="330" end="3600" vehsPerHour="40" type="car"/>
+    <flow id="flow_extra_v_right" route="extra_vertical_right" begin="345" end="3600" vehsPerHour="40" type="slow_car"/>
+    
+    <!-- Mixed vehicle type flows - ALL UNDER 50 veh/hr -->
+    <flow id="truck_flow_h1" route="horizontal_top" begin="240" end="3600" vehsPerHour="15" type="truck"/>
+    <flow id="truck_flow_h2" route="horizontal_bottom_reverse" begin="255" end="3600" vehsPerHour="15" type="truck"/>
+    <flow id="bus_flow_v1" route="vertical_left" begin="270" end="3600" vehsPerHour="8" type="bus"/>
+    <flow id="bus_flow_v2" route="vertical_right_reverse" begin="285" end="3600" vehsPerHour="8" type="bus"/>
+    
+    <!-- Peak hour additional flows - ALL UNDER 50 veh/hr -->
+    <flow id="peak_flow_1" route="horizontal_top" begin="1800" end="2700" vehsPerHour="30" type="car"/>
+    <flow id="peak_flow_2" route="vertical_left_reverse" begin="1800" end="2700" vehsPerHour="25" type="car"/>
+    <flow id="peak_flow_3" route="horizontal_bottom_reverse" begin="1800" end="2700" vehsPerHour="30" type="car"/>
+    
+</routes>

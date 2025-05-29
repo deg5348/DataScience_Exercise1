@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
+    <!-- Only allow straight-through movements at each junction -->
+    
+    <!-- Junction J1 (top-left) -->
+    <connection from="EN1_J1" to="E1_2" fromLane="0" toLane="0"/>
+    <connection from="E2_1" to="EJ1_N1" fromLane="0" toLane="0"/>
+    <connection from="EN2_J1" to="E1_3" fromLane="0" toLane="0"/>
+    <connection from="E3_1" to="EJ1_N2" fromLane="0" toLane="0"/>
+    
+    <!-- Junction J2 (top-right) -->
+    <connection from="E1_2" to="EJ2_N3" fromLane="0" toLane="0"/>
+    <connection from="EN3_J2" to="E2_1" fromLane="0" toLane="0"/>
+    <connection from="EN4_J2" to="E2_4" fromLane="0" toLane="0"/>
+    <connection from="E4_2" to="EJ2_N4" fromLane="0" toLane="0"/>
+    
+    <!-- Junction J3 (bottom-left) -->
+    <connection from="EN5_J3" to="E3_4" fromLane="0" toLane="0"/>
+    <connection from="E4_3" to="EJ3_N5" fromLane="0" toLane="0"/>
+    <connection from="EN6_J3" to="E3_1" fromLane="0" toLane="0"/>
+    <connection from="E1_3" to="EJ3_N6" fromLane="0" toLane="0"/>
+    
+    <!-- Junction J4 (bottom-right) -->
+    <connection from="E3_4" to="EJ4_N7" fromLane="0" toLane="0"/>
+    <connection from="EN7_J4" to="E4_3" fromLane="0" toLane="0"/>
+    <connection from="EN8_J4" to="E4_2" fromLane="0" toLane="0"/>
+    <connection from="E2_4" to="EJ4_N8" fromLane="0" toLane="0"/>
+</connections>
